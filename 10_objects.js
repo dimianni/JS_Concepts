@@ -7,12 +7,15 @@
 // equals
 // Object.getPrototypeOf()
 
+
+// Constructor function
 function Cat(name, color){
     this.name = name
     this.color = color
 }
 
 // Прототип это как отдельный обьект куда можно складывать свойства и методы
+// Are not getting hoisted
 Cat.prototype.voice = function(){
     console.log(`Cat ${this.name} says meow`);
 }
@@ -25,8 +28,7 @@ console.log(cat); // object, has only initial properties
 console.log(typeof cat.__proto__); // object
 console.log(Cat.prototype); // same as above
 
-// Constructor function (method of an object)
-console.log(cat.constructor); // ???
+console.log(cat.constructor); 
 
 cat.voice()
 
@@ -99,3 +101,22 @@ killerRabbit.speak();
 
 // console.log(person.hasOwnProperty("name"));
 // console.log(person.hasOwnProperty("skin"));
+
+
+
+
+/*-----------------------------------------------------------------------------*/
+/* Keyword new
+-------------------------------------------------------------------------------*/
+
+// this is how new keyword works natively
+function myNew(constructor, ...args) {
+    const obj = {}
+
+    Object.setPrototypeOf(obj, constructor.prototype)
+
+    return constructor.apply(obj, args) || obj
+}
+
+const cat2 = myNew(Cat, "black", "Fur")
+console.log(cat2);
