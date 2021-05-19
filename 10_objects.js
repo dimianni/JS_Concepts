@@ -2,10 +2,15 @@
 /* Objects and prototypes
 -------------------------------------------------------------------------------*/
 // https://medium.com/backticks-tildes/javascript-prototypes-ee46810e4866
+// https://chamikakasun.medium.com/javascript-prototype-and-prototype-chain-explained-fdc2ec17dd04   !!!
 
 // __proto__
 // equals
 // Object.getPrototypeOf()
+
+
+// Person === Person.prototype.constructor
+// Person.prototype === Person.prototype.constructor.prototype
 
 
 // Constructor function

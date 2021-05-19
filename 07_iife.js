@@ -2,6 +2,27 @@
 /* Immediately invoked function expression
 -------------------------------------------------------------------------------*/
 
+// simple way to isolate variables declarations, 
+// unlike block scoped let/const, IIFE variables are inaccessible from outside
+(function () {
+    console.log('IIFE');
+})()
+
+// EXAMPLE 
+// ID generator
+
+const generator = (function () {
+    let id = Math.floor(Math.random() * 10)
+
+    return function () {
+        return id
+    }
+})()
+
+console.log(generator());
+
+
+
 let result = []
 
 // for (var i = 0; i < 5; i++) {
@@ -25,3 +46,6 @@ for (var i = 0; i < 5; i++) {
 }
 console.log(result[4]);
 result[4]();
+
+
+
