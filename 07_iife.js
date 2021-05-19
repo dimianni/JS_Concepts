@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------*/
-/* Immediately invoked function expression
+/* IIFE stands for -> Immediately invoked function expression
 -------------------------------------------------------------------------------*/
 
 // simple way to isolate variables declarations, 

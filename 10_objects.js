@@ -19,8 +19,8 @@ function Cat(name, color){
     this.color = color
 }
 
-// Прототип это как отдельный обьект куда можно складывать свойства и методы
-// Are not getting hoisted
+// Prototype is like a separate object where we can put methods.
+// Prototype methods not getting hoisted.
 Cat.prototype.voice = function(){
     console.log(`Cat ${this.name} says meow`);
 }
@@ -85,7 +85,7 @@ killerRabbit.speak();
 
 
 /*-----------------------------------------------------------------------------*/
-/* Есть свойства прототипа и есть собственные (у обьекта)
+/* There are constructor function methods and prototype methods
 -------------------------------------------------------------------------------*/
 
 // function Person(){}
@@ -101,7 +101,7 @@ killerRabbit.speak();
 // console.log(person.legs); // 2
 
 /*-----------------------------------------------------------------------------*/
-/* Как узнать где свойства прототипа, а где собственные
+/* How to know where are constructor function methods and where are prototype ones?
 -------------------------------------------------------------------------------*/
 
 // console.log(person.hasOwnProperty("name"));

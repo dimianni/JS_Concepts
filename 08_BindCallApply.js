@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------*/
-/* Bind, Call, Apply
+/* Bind, Call, and Apply are methods which are used to transfer a function to a different object (while also transferring this context).
 -------------------------------------------------------------------------------*/
-// NOTE function in reality is an object
+// NOTE a JavaScript function in reality is an object.
 
 const club1 = {
     club: "Manchester",
@@ -17,7 +17,7 @@ const club2 = {
 }
 
 /*-----------------------------------------------------------------------------*/
-/* Bind это способ передачи функции другому обьекту (при этом this будет указывать на новый обьект)
+/* Bind 
 -------------------------------------------------------------------------------*/
 
 // club1.player.bind(club2, "Ronaldo")()
@@ -27,7 +27,7 @@ transfer()
 /*-----------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------*/
-/* Call is very similar to bind
+/* Call 
 -------------------------------------------------------------------------------*/
 // Differences:
 // 1. Executes the function it was called upon right away.

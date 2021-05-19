@@ -13,7 +13,8 @@ const me = {
 
 
 /*-----------------------------------------------------------------*/
-/* function within method has created its own scope -> 'this' has fallen out of me object scope, and points to window object
+/* function within method has created its own scope -> 
+// 'this' has fallen out of me object scope, and points to the global object
 -------------------------------------------------------------------*/
 
 const me2 = {
@@ -88,7 +89,7 @@ const arrow = {
 arrow.log()
 
 
-// Right
+// Correct
 const arrow2 = {
     name: "Big fat arrow2",
     log() {
