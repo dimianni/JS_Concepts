@@ -15,43 +15,42 @@
 /*-----------------------------------------------------------------------------*/
 
 
-// const sayHelloTo = function(name){
+const sayHelloTo = function(name){
 
-//     let message = "Hello " + name;
+    let message = "Hello " + name;
 
-//     return function() {
-//         console.log(message);
-//     }
+    return function() {
+        console.log(message);
+    }
 
-// }
+}
 
-// const sayHelloToAndrey = sayHelloTo("Andrey");
+const sayHelloToAndrey = sayHelloTo("Andrey");
 
-// sayHelloToAndrey()
-
-
-// function createFrameworkManager() {
-//     const fw = ["React", "Angular"]
-
-//     return {
-//         get: function(){
-//             return fw
-//         },
-//         add: function (framework) {
-//             fw.push(framework)
-//         }
-//     }
-// }
-// console.log(fw); // is not defined (fw is not in the global scope)
+sayHelloToAndrey()
 
 
-// let create = createFrameworkManager() // object
-// let fw = create.get() // access to fw variable
-// console.log(fw);
+function createFrameworkManager() {
+    const fw = ["React", "Angular"]
+
+    return {
+        get: function(){
+            return fw
+        },
+        add: function (framework) {
+            fw.push(framework)
+        }
+    }
+}
+console.log(fw); // is not defined (fw is not in the global scope)
+
+let create = createFrameworkManager() // object
+let fw = create.get() // access to fw variable
+console.log(fw);
 
 // create has access to fw array that belongs to createFrameworkManager function
-// create.add("Vue")
-// create.print()
+create.add("Vue")
+create.print()
 
 
 

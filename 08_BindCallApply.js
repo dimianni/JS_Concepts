@@ -1,5 +1,6 @@
 /*-----------------------------------------------------------------------------*/
-/* Bind, Call, and Apply are methods which are used to transfer a function to a different object (while also transferring this context).
+/* Bind, Call, and Apply are methods which are used to transfer a function to a 
+// different object (while also transferring this context).
 -------------------------------------------------------------------------------*/
 // NOTE a JavaScript function in reality is an object.
 

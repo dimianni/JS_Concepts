@@ -1,7 +1,13 @@
 /*-----------------------------------------------------------------------------*/
-/* Scope (видимость переменных)
+/* Scope 
+// Scope determines the visibility (accessibility) of a varibale in the area of code.
+// In general, there are two types of scopes, Global and Local:
+//
+//  - Global scope is the global object, or the window object if we are in a browser.
+//
+//  - Local scope, in turn, can be divided into Block scope (area within if, switch conditions, 
+//    and for, while loops) and Function scope (area within a function).
 -------------------------------------------------------------------------------*/
-// Global and local
 
 function funcA(){
     let a = 1;
@@ -25,6 +31,8 @@ function funcA(){
 
 funcA();
 
+
+// let and const are visible only within the block scope, unlike var which leaks to the global scope.
 {
     let i = 0;
     var j = 0;

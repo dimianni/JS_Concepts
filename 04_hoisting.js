@@ -1,4 +1,7 @@
-
+/*-----------------------------------------------------------------------------*/
+/* Hoisting is JavaScript's default behavior of moving all declarations to the top of the
+// current scope (to the top of the current script or the current function).
+-------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------*/
 /* Undefined (JS knows that 'i' is declared later. If it wasn't defined, it throws an Error)
