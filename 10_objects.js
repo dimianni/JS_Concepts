@@ -14,6 +14,8 @@
 
 
 // Constructor function
+// Creates empty object and attaches passed arguments as object's properties
+// 'new' keyword points to 'this' 
 function Cat(name, color){
     this.name = name
     this.color = color

@@ -37,10 +37,11 @@ Person.prototype.inverseCoef = function () {
 // https://medium.com/@luke_smaki/javascript-es6-classes-8a34b0a6720a
 
 class Footballer {
-    constructor(name, club, number){
+    constructor(information, name, club, number){
         this.name = name
         this.club = club
         this.number = number
+        
     }
     player(){
         console.log(`${this.name} plays for ${this.club} and has number ${this.number}.`);
