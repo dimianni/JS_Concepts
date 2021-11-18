@@ -30,7 +30,7 @@ git clone https://github.com/dimianni/JS_Concepts.git
 Type in 'node' and 'filename' in the terminal to execute the code. For instance:
 
 ```bash
-node run 01_types.js
+node 01_types.js
 ```
 
 NOTE: [Node](https://nodejs.org/en/) has to be installed globally on your machine. It is an environment which allows the execution of JavaScript locally on your machine.
