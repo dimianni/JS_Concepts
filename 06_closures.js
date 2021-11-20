@@ -30,6 +30,10 @@ const sayHelloToAndrey = sayHelloTo("Andrey");
 sayHelloToAndrey()
 
 
+
+
+
+
 function createFrameworkManager() {
     const fw = ["React", "Angular"]
 

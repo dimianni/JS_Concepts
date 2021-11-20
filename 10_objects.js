@@ -15,14 +15,13 @@
 
 // Constructor function
 // Creates empty object and attaches passed arguments as object's properties
-// 'new' keyword points to 'this' 
 function Cat(name, color){
     this.name = name
     this.color = color
 }
 
-// Prototype is like a separate object where we can put methods.
-// Prototype methods not getting hoisted.
+// Prototype is like a "higher-order" object where we can put methods to make them accessible to all the children.
+// Because it doesn't make sense to place the exact same function in every instance of an object
 Cat.prototype.voice = function(){
     console.log(`Cat ${this.name} says meow`);
 }

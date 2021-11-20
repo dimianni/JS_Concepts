@@ -36,12 +36,13 @@ Person.prototype.inverseCoef = function () {
 -------------------------------------------------------------------*/
 // https://medium.com/@luke_smaki/javascript-es6-classes-8a34b0a6720a
 
+
+// Really the same as constructor functions (they operate the same), just with easier lexical cover
 class Footballer {
     constructor(information, name, club, number){
         this.name = name
         this.club = club
         this.number = number
-        
     }
     player(){
         console.log(`${this.name} plays for ${this.club} and has number ${this.number}.`);
@@ -88,6 +89,8 @@ class Me{
 }
 
 const dimonchik = new Me("Dima", ["exercise", "learn JS"])
+Me.staticMethod();
+Math.abs(1.2);
 // dimonchik.logTasks()
 
 // dimonchik.staticMethod() // Error!

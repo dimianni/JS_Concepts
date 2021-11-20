@@ -23,7 +23,7 @@ console.log(generator());
 
 
 
-let result = []
+// let result = []
 
 // for (var i = 0; i < 5; i++) {
 //     result.push(function(){
@@ -44,8 +44,8 @@ for (var i = 0; i < 5; i++) {
         })
     })()
 }
-console.log(result[4]);
-result[4]();
+// console.log(result[4]);
+// result[4]();
 
 
 

@@ -7,7 +7,7 @@
 const club1 = {
     club: "Manchester",
     num: 7,
-    player: function(name) {
+    player: function (name) {
         console.log(`${this.club}'s player, ${name}, number ${this.num}.`);
     }
 }

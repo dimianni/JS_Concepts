@@ -1,6 +1,7 @@
 /*-----------------------------------------------------------------------------*/
-/* Scope 
-// Scope determines the visibility (accessibility) of a varibale in the area of code.
+/* Scope is the space/environment in which a certain variable is declared.
+// This influences the visibility (accessibility) of a varibale in the area of code.
+//
 // In general, there are two types of scopes, Global and Local:
 //
 //  - Global scope is the global object, or the window object if we are in a browser.
