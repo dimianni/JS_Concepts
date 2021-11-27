@@ -186,3 +186,19 @@ ages.forEach(function (age) {
 })
 
 // console.log(ages); // made no changes to the original array
+
+
+/*--------------------------------------------------------------------------------------*/
+/* Array.from() method
+----------------------------------------------------------------------------------------*/
+
+// Creating an array programmatically
+const dices = Array.from({ length: 10 }, (el, i) => Math.round(Math.random() * 6))
+
+// _ is a convention; Means that the variable is not used
+const dices1 = Array.from({ length: 10 }, (_, i) => i + 1)
+
+console.log(dices, dices1);
+
+// Creating an array from NodeList
+const mydivs = Array.from(document.querySelectorAll(".test"))
