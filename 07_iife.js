@@ -1,5 +1,7 @@
 /*-----------------------------------------------------------------------------*/
 /* IIFE stands for -> Immediately invoked function expression
+** NOTE: IIFEs are not as popular any more because of const/let and the block 
+** scope (which makes variables private and inaccessible from outside)
 -------------------------------------------------------------------------------*/
 
 // simple way to isolate variables declarations, 

@@ -75,15 +75,17 @@ const solution3 = {
 
 /*-----------------------------------------------------------------------------*/
 /* Arrow function in object methods
+// NOTE: NEVER USE ARROW FUNCTION AS A METHOD!!! 
 -------------------------------------------------------------------------------*/
 
 // Wrong
 const arrow = {
     name: "Big fat arrow",
     log: () => {
-        console.log(this);
-        // undefined BECAUSE ‘this’, always references the owner of the function it is in, 
-        // for this case — since it is now out of scope — the window/global object.
+        console.log(this); // undefined
+        // ‘this’ always points at the owner of the function/method 'this' is in.
+        // Arrow functions use 'lexical' this keyword. Meaning, the use the 'this' keyword of its parent
+        // In this case, the owner of the method is the global object (NOTE: object declaration is NOT Block Scope)
     }
 }
 arrow.log()

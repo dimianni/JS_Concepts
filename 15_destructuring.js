@@ -19,11 +19,36 @@ const me = {
 /*--------------------------------------------------------*/
 /* Can do this:
 ----------------------------------------------------------*/
+
+// NOTE: in object destructuring order does not matter
+// variable names and the object keys are being matched to assign the correct value!
+// To define variables with names different from keys, use "name: fullname", where 
+// 'name' is object key and 'fullname' is the variable name
+
 const { name: fullname, nickname, age, location = "Aberdeen" } = me;
 
-console.log(fullname, nickname, age, location);
+// console.log(fullname, nickname, age, location);
 
 
+/*--------------------------------------------------------*/
+/* Another example
+----------------------------------------------------------*/
+
+const me2 = {
+    name: "Dima",
+    surname: "Anikin",
+    nick: "Dimianni",
+    hobbies: ["surf", "code", "travel"],
+}
+
+let {
+    name,
+    surname,
+    hobbies,
+    hobbies: [surf, code, travel]
+} = me2;
+
+// console.log(name, surname, hobbies, surf, code, travel);
 
 /*----------------------------------------------------------------------------------------------*/
 /* Can also destructure object's properties when passing it into a function
@@ -100,6 +125,13 @@ const [a, c] = arr;
 
 // console.log(a, c);
 
+/*--------------------------------------------------------*/
+/* OR
+----------------------------------------------------------*/
+
+const [x, y] = ["Dima", "Anikin"]
+
+console.log(x, y);
 
 
 /*----------------------------------------------------------------------------------------------*/
