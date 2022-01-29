@@ -30,7 +30,7 @@ function funcA(){
     console.log("funcA:", a);
 }
 
-funcA();
+// funcA();
 
 
 // let and const are visible only within the block scope, unlike var which leaks to the global scope.
@@ -39,5 +39,17 @@ funcA();
     var j = 0;
 }
 
-console.log(i); // not defined
-console.log(j); // 0
+// console.log(i); // not defined
+// console.log(j); // 0
+
+function testFunc() {
+    let obj1 = {
+        name: "Dimon",
+        getName: () => {
+            console.log(this);
+        }
+    }
+    obj1.getName();
+}
+
+testFunc()

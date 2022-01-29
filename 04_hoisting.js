@@ -4,7 +4,7 @@
 -------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------*/
-/* Undefined (JS knows that 'i' is declared later. If it wasn't defined, it throws an Error)
+/* Undefined (JS knows that 'i' is declared later. Throws a ReferenceError)
 -------------------------------------------------------------------------------*/
 console.log(i);
 var i = 42;

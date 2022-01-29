@@ -24,6 +24,8 @@ const club2 = {
 // club1.player.bind(club2, "Ronaldo")()
 const transfer = club1.player.bind(club2, "Ronaldo")
 transfer()
+console.log(club2); // club2 doesn't actually have the "player" method
+
 
 /*-----------------------------------------------------------------------------*/
 

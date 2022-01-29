@@ -17,6 +17,7 @@ function Person(id, name, height, weight) {
     this.name = name
     this.height = height
     this.weight = weight
+    // Never add methods directly to constructor functions
     this.coef = function () {
         let cf = this.weight / this.height
         return Math.round(cf * 100) / 100
@@ -44,11 +45,18 @@ class Footballer {
         this.club = club
         this.number = number
     }
+
+    // Will be inherited by class instances (in the .prototype)
     player(){
         console.log(`${this.name} plays for ${this.club} and has number ${this.number}.`);
     }
     getThis(){
         console.log(this);
+    }
+
+    // Will NOT be inherited by class instances
+    static hey() {
+        console.log("Hey!!!");
     }
 }
 
@@ -97,36 +105,4 @@ Math.abs(1.2);
 // Me.staticMethod() // I am so static.
 
 
-/*-----------------------------------------------------------------*/
-/* Getters and setters in Classes
--------------------------------------------------------------------*/
-
-// NOTE 
-// The underscore in front of the properties is another example of a convention. 
-// It also prevents a stack overflow when calling our methods. Also, note that we 
-// are calling “jeff.name” not “jeff._name”. So the output is being returned from our getter.
-
-class User{
-    constructor(name, age, email){
-        this._name = name // _ ?? getters and setters wouldn't work without it
-        this._age = age
-        this._email = email
-    }
-
-    get name(){
-        return this._name;
-    }
-
-    set name(newName){
-        this._name = newName;
-    }
-}
-
-const dimon = new User("Dimon", 20, "dmytro.anikin@gmail.com")
-
-console.log(dimon.name);
-
-dimon.name = "Dimich"
-
-console.log(dimon.name);
 

@@ -65,12 +65,13 @@ const solution3 = {
     name: "Dima",
     tasks: ["excercise", "learn JS"],
     logTasks: function () {
+        console.log(this);
         this.tasks.forEach(task => {
             console.log(`${this.name}, you have to ${task}`); // this.name == "Dima"
         })
     }
 }
-// solution3.logTasks()
+solution3.logTasks()
 
 
 /*-----------------------------------------------------------------------------*/
@@ -88,7 +89,7 @@ const arrow = {
         // In this case, the owner of the method is the global object (NOTE: object declaration is NOT Block Scope)
     }
 }
-arrow.log()
+// arrow.log()
 
 
 // Correct
@@ -98,6 +99,6 @@ const arrow2 = {
         console.log(this.name);
     }
 }
-arrow2.log()
+// arrow2.log()
 
 

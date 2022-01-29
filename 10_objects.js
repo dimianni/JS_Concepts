@@ -4,6 +4,18 @@
 // https://medium.com/backticks-tildes/javascript-prototypes-ee46810e4866
 // https://chamikakasun.medium.com/javascript-prototype-and-prototype-chain-explained-fdc2ec17dd04   !!!
 
+let age = 20;
+
+let testObj = {
+    firstname: "Dimon",
+    lastname: "Anikin"
+}
+
+testObj.age = age;
+
+console.log(testObj);
+
+
 // __proto__
 // equals
 // Object.getPrototypeOf()
@@ -80,9 +92,32 @@ ProtoRabbit.prototype.speak = function () {
     console.log(`The ${this.type} rabbit says ${this.words}`);
 }
 
-let killerRabbit = new ProtoRabbit('grey', 'SKREEEEE!', 'assassin');
-killerRabbit.speak();
+// let killerRabbit = new ProtoRabbit('grey', 'SKREEEEE!', 'assassin');
+// killerRabbit.speak();
 
+
+/*-----------------------------------------------------------------------------*/
+/* Constructor functions inheritance
+-------------------------------------------------------------------------------*/
+
+function Person(firstname, birthYear){
+    this.firstname = firstname
+    this.birthYear = birthYear
+}
+
+Person.prototype.getAge = function(){
+    return 2022 - this.birthYear;
+}
+
+// Linking Constructor Functions
+function Student(firstname, birthYear, course){
+
+    Person.call(this, firstname, birthYear)
+    this.course = course
+}
+
+// Linking prototypes
+Student.prototype = Object.create(Person.prototype)
 
 
 /*-----------------------------------------------------------------------------*/

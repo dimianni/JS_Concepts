@@ -19,8 +19,13 @@ let b = a;
 
 b.push(4)
 
-console.log("a", a); 
-console.log("b", b); 
+// console.log("a", a); 
+// console.log("b", b); 
 
 let c = [1, 2, 3, 4];
-console.log(a === c); // false even though they have the same content
+// console.log(a === c); // false even though they have the same content
+
+
+let testArr1 = [1, 2, 3];
+let testArr2 = [1, 2, 3];
+console.log(testArr1 === testArr2); // false
