@@ -4,6 +4,30 @@
 // Great article on Promises -> https://zellwk.com/blog/js-promises/
 -------------------------------------------------------------------*/
 
+// NOTE: resolve() and reject() are like conductors => they pass the value. Therefore they are ideal to serve as callbacks.
+function test() {
+    return new Promise(function (resolve, reject) {
+
+        setTimeout(() => {
+
+            let randomNum = Math.random();
+
+            if (randomNum >= 0.5) {
+                resolve(`Resolved 🔥 ${randomNum}`)
+            } else{
+                reject(`Rejected 😩`)
+            }
+
+        }, 2000);
+
+    })
+}
+
+test()
+    .then(res => console.log(res)) // Grabbing resolve
+    .catch(err => console.log(err)) // Grabbing reject
+
+
 // Example. I am preparing a party. Sofia promised to buy a Neapoletano cake in a week (1 sec in our case).
 const sofiaBuysCake = cakeType => {
 
